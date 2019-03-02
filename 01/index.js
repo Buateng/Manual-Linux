@@ -31,7 +31,7 @@ for (let i=0; i<res.length; i++){
 if (res.toString() === res2.toString()){
     console.log("es palíndromo")
 }else {
-    console.log("ni mergas");
+    console.log("ni mergas vos");
 }
 
 console.log(res);
