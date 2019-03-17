@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<form>
+	<h5 id="form-error"></h5>
+	<div class="form-group">
+		<input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+		<input class="btn btn-primary" type="submit" value="Get in Touch!">
+	</div>
+</form>
+
+<script>
+    let formError = document.getElementById("form-error");
+
+    formError.style.display = "none";
+
+    document.addEventListener("keyup", function (e) {
+        e.preventDefault();
+
+        let email = document.getElementById("email").value;
+
+        if (email.indexOf('@') === -1 || email.indexOf('.') === -1 || email.length <= 4){
+            formError.style.display = "inline";
+            formError.style.color = "red";
+            formError.innerHTML = "Invalid email";
+        }else {
+            formError.style.display = "none";
+        }
+
+    });
+
+
+
+</script>
+</body>
+</html>
